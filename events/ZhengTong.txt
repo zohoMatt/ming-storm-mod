@@ -1,0 +1,44 @@
+namespace = ZhengTong
+
+# 明朝正统年间闽浙民变
+country_event = {
+	id = ZhengTong.01
+	title = ZhengTong.01.title
+	desc = ZhengTong.01.desc
+	picture = ANGRY_MOB_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MNG
+		is_year = 1444
+	}
+	
+	immediate = {
+		# 福州
+		669 = {
+			spawn_rebels = {
+				size = 20
+				type = anti_tax_rebels
+				culture = chimin
+				leader = "Deng Maoqi"
+			}
+		}
+
+		# 宁波
+		2149 = {
+			spawn_rebels = {
+				size = 20
+				type = anti_tax_rebels
+				culture = wu
+				leader = "Ye Zongliu"
+			}
+		}
+	}
+	
+	option = {
+		name = ZhengTong.01.a
+		add_war_exhaustion = 2.0
+		add_prestige = -10
+	}
+}
