@@ -1,0 +1,10 @@
+on_new_monarch = {
+    if = {
+        limit = {
+            tag = MNG
+        }
+        country_event = {
+            id = ChengHua.01
+        }
+    }
+}

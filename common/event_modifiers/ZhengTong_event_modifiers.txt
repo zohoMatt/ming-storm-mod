@@ -1,5 +1,0 @@
-emperor_as_leader = {
-	land_morale = 0.1
-	garrison_growth = 0.1
-	recover_army_morale_speed = 0.2
-}

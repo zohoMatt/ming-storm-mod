@@ -1,0 +1,34 @@
+namespace = ChengHua
+
+# 明成化年间设立西厂，每年要求资金支持
+country_event = {
+	id = ChengHua.01
+	title = ChengHua.01.title
+	desc = ChengHua.01.desc
+	picture = GREAT_BUILDING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MNG
+		monthly_income = 100
+	}
+
+	option = {
+		name = ChengHua.01.a
+		change_adm = 1
+		add_years_of_income = -3
+		add_ruler_modifier = {
+			name = western_depot_established
+			duration = -1
+		}
+	}
+
+	option = {
+		name = ChengHua.01.b
+		add_ruler_modifier = {
+			name = eunuchs_unhappy_about_wp
+			duration = -1
+		}
+	}
+}

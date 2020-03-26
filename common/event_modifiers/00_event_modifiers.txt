@@ -1,0 +1,16 @@
+emperor_as_leader = {
+	land_morale = 0.1
+	garrison_growth = 0.1
+	recover_army_morale_speed = 0.2
+}
+
+western_depot_established = {
+	discipline = 0.05
+	global_unrest = 1
+}
+
+eunuchs_unhappy_about_wp = {
+	yearly_harmony = 3
+	yearly_corruption = 0.5
+	tolerance_own = 0.5
+}
