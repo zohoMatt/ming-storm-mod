@@ -1,0 +1,3 @@
+_debug_add_monthly_income = {
+	global_tax_income = 100
+}

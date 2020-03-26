@@ -1,0 +1,23 @@
+namespace = _debug
+
+country_event = {
+	id = _debug.01
+	title = _debug.01.t
+	desc = _debug.01.desc
+
+
+	trigger = {
+		is_year = 1999
+	}
+
+	immediate = {
+		add_country_modifier = {
+			name = add_monthly_income
+			duration = -1
+		}
+	}
+
+	option = {
+		name = _debug.01.a
+	}
+}

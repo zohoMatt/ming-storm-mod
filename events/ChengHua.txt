@@ -1,13 +1,11 @@
 namespace = ChengHua
 
-# 明成化年间设立西厂，每年要求资金支持
+# 明成化年间设立西厂
 country_event = {
 	id = ChengHua.01
 	title = ChengHua.01.title
 	desc = ChengHua.01.desc
 	picture = GREAT_BUILDING_eventPicture
-
-	fire_only_once = yes
 
 	trigger = {
 		tag = MNG
