@@ -7,6 +7,9 @@ country_event = {
 	desc = ChengHua.01.desc
 	picture = GREAT_BUILDING_eventPicture
 
+	# on_new_monarchy
+	is_triggered_only = yes
+
 	trigger = {
 		tag = MNG
 		monthly_income = 100

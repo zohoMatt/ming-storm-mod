@@ -8,10 +8,10 @@ country_event = {
 	picture = SIEGE_eventPicture
 
 	fire_only_once = yes
+	is_triggered_only = yes
 
 	trigger = {
 		tag = MNG
-		is_year = 1444
 	}
 	
 	immediate = {

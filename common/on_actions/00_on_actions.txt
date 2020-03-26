@@ -1,10 +1,11 @@
 on_new_monarch = {
-    if = {
-        limit = {
-            tag = MNG
-        }
-        country_event = {
-            id = ChengHua.01
-        }
+    events = {
+        ChengHua.01
+    }
+}
+
+on_startup = {
+    events = {
+        ZhengTong.01
     }
 }

@@ -5,6 +5,7 @@ country_event = {
 	title = _debug.01.t
 	desc = _debug.01.desc
 
+	is_triggered_only = yes
 
 	trigger = {
 		is_year = 1999
@@ -12,7 +13,7 @@ country_event = {
 
 	immediate = {
 		add_country_modifier = {
-			name = add_monthly_income
+			name = _debug_add_monthly_income
 			duration = -1
 		}
 	}
