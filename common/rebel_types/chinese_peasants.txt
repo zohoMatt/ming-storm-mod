@@ -1,0 +1,91 @@
+chinese_peasants_rebels = {
+	color = { 40 140 210 }
+	area = nation
+	government = anti
+	defection = culture_group
+	independence = culture
+	defect_delay = 1
+	gfx_type = culture_province
+
+	resilient = no
+	reinforcing = yes
+	general = yes
+	smart = yes
+	unit_transfer = no
+	will_relocate = yes
+
+	artillery = 0.0
+	infantry = 0.9
+	cavalry = 0.1
+	morale = 1.25
+
+	# Possible handle actions
+	handle_action_negotiate = no
+	handle_action_stability = no
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+
+	spawn_chance = {
+		factor = 2
+		modifier = {
+			factor = 2.0
+			owner = { has_wartaxes = yes }
+		}
+		modifier = {
+			factor = 2.0
+			owner = { war_exhaustion = 4 }
+		}
+	}
+
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 3
+			unrest = 6
+		}
+	}
+
+	siege_won_trigger = {
+		NOT = { local_autonomy = 100 }
+	}
+	siege_won_effect = {
+		add_local_autonomy = 15
+	}
+
+	can_negotiate_trigger = {
+		always = no
+	}
+
+	can_enforce_trigger = {
+		always = yes
+	}
+
+	demands_description = "chinese_peasants_rebels_demand"
+	# todo Establish a new country
+	demands_enforced_effect = {
+		add_prestige = -30
+
+		every_owned_province = {
+			limit = {
+				has_rebel_faction = chinese_peasants_rebels
+			}
+			cede_province = WUU
+		}
+	}
+}
