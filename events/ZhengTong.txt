@@ -19,7 +19,7 @@ country_event = {
 		669 = {
 			spawn_rebels = {
 				size = 20
-				type = anti_tax_rebels
+				type = pretender_rebels
 				culture = chimin
 				leader = "Deng Maoqi"
 			}
@@ -29,7 +29,7 @@ country_event = {
 		2149 = {
 			spawn_rebels = {
 				size = 20
-				type = anti_tax_rebels
+				type = pretender_rebels
 				culture = wu
 				leader = "Ye Zongliu"
 			}
