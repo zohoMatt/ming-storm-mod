@@ -22,16 +22,18 @@ country_event = {
 				type = pretender_rebels
 				culture = chimin
 				leader = "Deng Maoqi"
+				win = yes
 			}
 		}
 
 		# 宁波
 		2149 = {
 			spawn_rebels = {
-				size = 20
+				size = 15
 				type = pretender_rebels
 				culture = wu
 				leader = "Ye Zongliu"
+				win = yes
 			}
 		}
 	}

@@ -1,3 +1,5 @@
+namespace = ZhengDe
+
 # 明正德设立豹房
 country_event = {
 	id = ZhengDe.01
