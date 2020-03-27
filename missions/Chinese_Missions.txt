@@ -1,0 +1,146 @@
+indochina_heritage_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+	}
+	has_country_shield = yes
+
+	secure_our_heritage = {
+		icon = mission_chinese_general_riding
+		required_missions = { }
+		provinces_to_highlight = {
+			area = yun_gui_borderland_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			yun_gui_borderland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			add_accepted_culture = shan
+			add_accepted_culture = bai
+			vietnam_area = {
+				add_permanent_claim = ROOT
+			}
+			red_river_delta_area = {
+				add_permanent_claim = ROOT
+			}
+			north_laos_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	annex_da_viet = {
+		icon = mission_invade_island
+		required_missions = { secure_our_heritage }
+		provinces_to_highlight = {
+			OR = {
+				area = vietnam_area
+				area = red_river_delta_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			vietnam_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			red_river_delta_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			add_accepted_culture = zhuang
+			add_mandate = 10
+			add_prestige = 10
+		}
+	}
+
+	# secure_coastline = {
+
+	# }
+
+	# south_china_sea = {
+
+	# }
+}
+
+indochina_heritage_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+	}
+
+	nanzhang_kingdom = {
+		position = 2
+		icon = mission_cannons_firing
+		required_missions = { secure_our_heritage }
+		provinces_to_highlight = {
+			OR = {
+				area = north_laos_area
+			}
+		}
+
+		trigger = {
+			north_laos_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			add_prestige = 10
+			add_mil_power = 50
+			south_laos_area = {
+				add_permanent_claim = ROOT
+			}
+			khorat_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	unify_laotian_culture = {
+		icon = mission_indian_soldier_elephant
+		required_missions = { nanzhang_kingdom }
+		provinces_to_highlight = {
+			OR = {
+				area = south_laos_area
+				area = khorat_area
+			}
+		}
+
+		trigger = {
+			south_laos_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+			khorat_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			add_accepted_culture = lao
+			add_prestige = 10
+		}
+	}
+}
+
+indochina_heritage_3 = {
+
+}
