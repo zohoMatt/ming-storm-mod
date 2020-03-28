@@ -1,0 +1,43 @@
+spriteTypes = {
+	spriteType = {
+		name = "MING_EMPEROR_CRUISE_event_pictures"
+		texturefile = "gfx\event_pictures\MING_EMPEROR_CRUISE_event_pictures.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "MING_EMPEROR_DISCUSSION_event_pictures"
+		texturefile = "gfx\event_pictures\MING_EMPEROR_DISCUSSION_event_pictures.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "MING_ENTERTAINING_event_pictures"
+		texturefile = "gfx\event_pictures\MING_ENTERTAINING_event_pictures.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "MING_EXAMS_event_pictures"
+		texturefile = "gfx\event_pictures\MING_EXAMS_event_pictures.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "MING_GENERALS_event_pictures"
+		texturefile = "gfx\event_pictures\MING_GENERALS_event_pictures.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "MING_MILITARY_CAMP_event_pictures"
+		texturefile = "gfx\event_pictures\MING_MILITARY_CAMP_event_pictures.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "MING_MINISTERS_event_pictures"
+		texturefile = "gfx\event_pictures\MING_MINISTERS_event_pictures.dds"
+		allwaystransparent = yes
+	}
+}

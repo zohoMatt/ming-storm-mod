@@ -5,7 +5,7 @@ country_event = {
 	id = ChengHua.01
 	title = ChengHua.01.title
 	desc = ChengHua.01.desc
-	picture = CHINESE_GENERAL_eventPicture
+	picture = MING_MINISTERS_event_pictures
 
 	# on_new_monarchy
 	is_triggered_only = yes

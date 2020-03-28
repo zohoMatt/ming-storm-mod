@@ -5,7 +5,7 @@ country_event = {
 	id = ZhengDe.01
 	title = ZhengDe.01.title
 	desc = ZhengDe.01.desc
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = MING_ENTERTAINING_event_pictures
 
 	trigger = {
 		is_year = 1510

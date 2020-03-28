@@ -5,7 +5,7 @@ country_event = {
 	id = ZhengTong.01
 	title = ZhengTong.01.title
 	desc = ZhengTong.01.desc
-	picture = SIEGE_eventPicture
+	picture = MING_EMPEROR_CRUISE_event_pictures
 
 	fire_only_once = yes
 	is_triggered_only = yes
