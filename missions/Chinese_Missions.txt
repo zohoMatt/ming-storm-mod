@@ -1,5 +1,5 @@
 indochina_heritage_1 = {
-	slot = 1
+	slot = 2
 	generic = no
 	ai = yes
 	potential = {
@@ -7,9 +7,29 @@ indochina_heritage_1 = {
 	}
 	has_country_shield = yes
 
-	secure_our_heritage = {
+	supress_rebels = {
 		icon = mission_chinese_general_riding
 		required_missions = { }
+		provinces_to_highlight = {
+		}
+
+		trigger = {
+			NOT = { num_of_rebel_armies = 1 }
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+		}
+
+		effect = {
+			add_prestige = 5
+			add_war_exhaustion = -1
+			yun_gui_borderland_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	secure_our_heritage = {
+		icon = mission_unite_home_region
+		required_missions = { supress_rebels }
 		provinces_to_highlight = {
 			area = yun_gui_borderland_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -34,11 +54,17 @@ indochina_heritage_1 = {
 			north_laos_area = {
 				add_permanent_claim = ROOT
 			}
+			northern_thai_area = {
+				add_permanent_claim = ROOT
+			}
+			central_thai_area = {
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
 	annex_da_viet = {
-		icon = mission_invade_island
+		icon = mission_rice_field
 		required_missions = { secure_our_heritage }
 		provinces_to_highlight = {
 			OR = {
@@ -63,34 +89,165 @@ indochina_heritage_1 = {
 			add_accepted_culture = zhuang
 			add_mandate = 10
 			add_prestige = 10
+			malaya_area = {
+				add_claim = ROOT
+			}
 		}
 	}
 
-	# secure_coastline = {
+	stop_ayyut = {
+		position = 5
+		icon = mission_sea_battles
+		required_missions = {
+			control_siam,
+			annex_da_viet,
+			unify_laotian_culture
+		}
 
-	# }
+		provinces_to_highlight = {
+			region = malaya_region
+			country_or_non_sovereign_subject_holds = AYU
+		}
 
-	# south_china_sea = {
+		trigger = {
+			malaya_region = {
+				type = all
+				OR = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = AYU
+					}
+				}
+			}
+		}
 
-	# }
+		effect = {
+			add_prestige = 30
+			indo_china_region = {
+				add_claim = ROOT
+			}
+		}
+	}
+
+	unify_indochina = {
+		icon = mission_invade_burma
+		required_missions = {
+			stop_ayyut
+		}
+
+		provinces_to_highlight = {
+			region = indo_china_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			indo_china_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			add_adm_power = 100
+		}
+	}
+
+	dominate_malacca_trade = {
+		icon = mission_asian_trader
+		required_missions = {
+			unify_indochina
+		}
+
+		provinces_to_highlight = {
+		}
+
+		trigger = {
+			1361 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+
+		effect = {
+			add_dip_power = 100
+			add_country_modifier = {
+				name = effect_dominate_malacca_trade
+				duration = -1
+			}
+			change_price = {
+				trade_goods = chinaware
+				key = dominate_chinaware_distribution
+				value = 0.45
+				duration = -1
+			}
+			1361 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 50
+					key = control_malacca
+				}
+			}
+		}
+	}
 }
 
 indochina_heritage_2 = {
-	slot = 2
+	slot = 1
 	generic = no
 	ai = yes
 	potential = {
 		tag = MNG
 	}
+	has_country_shield = yes
 
-	nanzhang_kingdom = {
-		position = 2
+	control_siam = {
+		position = 3
+		icon = mission_indian_soldier_elephant
+		required_missions = {
+			secure_our_heritage
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = northern_thai_area
+				area = central_thai_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			northern_thai_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			central_thai_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			add_mandate = 10
+		}
+	}
+}
+
+indochina_heritage_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+	}
+	has_country_shield = yes
+
+	nanzhang_incident = {
+		position = 3
 		icon = mission_cannons_firing
 		required_missions = { secure_our_heritage }
 		provinces_to_highlight = {
 			OR = {
 				area = north_laos_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
@@ -113,13 +270,14 @@ indochina_heritage_2 = {
 	}
 
 	unify_laotian_culture = {
-		icon = mission_indian_soldier_elephant
-		required_missions = { nanzhang_kingdom }
+		icon = mission_asian_city
+		required_missions = { nanzhang_incident }
 		provinces_to_highlight = {
 			OR = {
 				area = south_laos_area
 				area = khorat_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
@@ -139,8 +297,4 @@ indochina_heritage_2 = {
 			add_prestige = 10
 		}
 	}
-}
-
-indochina_heritage_3 = {
-
 }
