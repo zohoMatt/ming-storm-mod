@@ -298,3 +298,117 @@ indochina_heritage_3 = {
 		}
 	}
 }
+
+ming_colonist_1 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+	}
+	has_country_shield = yes
+
+	colonize_taiwan = {
+		position = 8
+		icon = mission_invade_island
+		required_missions = { }
+
+		provinces_to_highlight = {
+			area = taiwan_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		trigger = {
+			2154 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2155 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			738 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = colonial_enthusiasm
+				duration = 7300
+			}
+		}
+	}
+
+	kamchatka_naval_port = {
+		icon = mission_rb_a_mighty_fleet
+		required_missions = {
+			colonize_taiwan
+		}
+
+		provinces_to_highlight = {
+			area = kamchatka_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		trigger = {
+			kamchatka_area = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = effect_kamct_naval_port
+				duration = -1
+			}
+		}
+	}
+
+	mexican_city_of_gold = {
+		icon = mission_war_chest
+		required_missions = {
+			kamchatka_naval_port
+		}
+
+		provinces_to_highlight = {
+			region = mexico_region
+		}
+
+		trigger = {
+			mexico_region = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = discover_mexico
+				duration = 9125
+			}
+		}
+	}
+
+	ming_caribbean_colony = {
+		icon = mission_invade_island
+		required_missions = { mexican_city_of_gold }
+
+		provinces_to_highlight = {
+			region = caribbean_sea_region
+		}
+
+		trigger = {
+			colony = 2
+		}
+		effect = {
+			add_liberty_desire = -20
+			# todo
+		}
+	}
+}
