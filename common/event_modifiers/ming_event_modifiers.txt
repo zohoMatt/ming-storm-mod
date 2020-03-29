@@ -37,3 +37,54 @@ effect_dominate_malacca_trade = {
 	inflation_reduction = -0.1
 	inflation_action_cost = 0.2
 }
+
+# 勘察加海军基地
+effect_kamct_naval_port = {
+	naval_maintenance_modifier = -0.05
+	navy_tradition_decay = -0.2
+	own_coast_naval_combat_bonus = 1.0
+}
+
+# 发现墨西哥
+discover_mexico = {
+	global_colonial_growth = 20
+	native_uprising_chance = -0.5
+	range = 0.25
+}
+
+# 夺取加勒比海
+conquer_caribbean = {
+	merchants = 1
+	global_colonial_growth = 10
+	global_tariffs = 0.2
+	embargo_efficiency = 0.3
+	naval_forcelimit_modifier = 0.2
+	
+	naval_maintenance_modifier = 0.1
+}
+
+# 殖民美中沙漠（对明的战略意义差，因此奖励需要加强）
+colony_mid_us = {
+	colonists = 1
+	merchants = 1
+	global_colonial_growth = 50
+	expel_minorities_cost = -0.5
+	trade_steering = 0.1
+	trade_efficiency = 0.1
+	global_trade_power = 0.1
+	global_trade_goods_size_modifier = 0.1
+	max_absolutism = 15
+	yearly_absolutism = 2
+	meritocracy = 2
+	
+	yearly_corruption = 0.2
+	inflation_reduction = -0.1
+}
+
+# 殖民美东（对明战略意义差，且进度慢）
+colony_east_us = {
+	colonists = 1
+	merchants = 1
+	global_colonial_growth = 80
+	embargo_efficiency = 0.3
+}

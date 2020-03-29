@@ -1,0 +1,7 @@
+# 奖励商业霸权
+dominate_global_trade = {
+	global_trade_power = 0.1
+	trade_efficiency = 0.1
+	trade_steering = 0.1
+	embargo_efficiency = 0.15
+}
