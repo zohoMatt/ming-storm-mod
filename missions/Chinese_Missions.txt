@@ -1,3 +1,4 @@
+# 印度支那系列
 indochina_heritage_1 = {
 	slot = 2
 	generic = no
@@ -162,7 +163,10 @@ indochina_heritage_1 = {
 
 		trigger = {
 			1361 = {
-				is_strongest_trade_power = ROOT
+				AND = {
+					is_strongest_trade_power = ROOT
+					has_most_province_trade_power = ROOT
+				}
 			}
 		}
 
@@ -299,6 +303,7 @@ indochina_heritage_3 = {
 	}
 }
 
+# 明殖民主义系列
 ming_colonist_1 = {
 	slot = 2
 	generic = no
@@ -308,7 +313,7 @@ ming_colonist_1 = {
 	}
 	has_country_shield = yes
 
-	colonize_taiwan = {
+	ming_colonize_taiwan = {
 		position = 8
 		icon = mission_invade_island
 		required_missions = { }
@@ -343,7 +348,7 @@ ming_colonist_1 = {
 	kamchatka_naval_port = {
 		icon = mission_rb_a_mighty_fleet
 		required_missions = {
-			colonize_taiwan
+			ming_colonize_taiwan
 		}
 
 		provinces_to_highlight = {
@@ -351,13 +356,14 @@ ming_colonist_1 = {
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			has_discovered = ROOT
 		}
 
 		trigger = {
-			kamchatka_area = {
-				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				area = kamchatka_area
+				is_city = yes
 			}
 		}
 
@@ -376,14 +382,15 @@ ming_colonist_1 = {
 		}
 
 		provinces_to_highlight = {
-			region = mexico_region
+			colonial_region = colonial_mexico
+			has_discovered = ROOT
 		}
 
 		trigger = {
-			mexico_region = {
-				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				colonial_region = colonial_mexico
+				is_city = yes
 			}
 		}
 
@@ -396,19 +403,245 @@ ming_colonist_1 = {
 	}
 
 	ming_caribbean_colony = {
-		icon = mission_invade_island
+		icon = mission_rb_mediterranean_authority
 		required_missions = { mexican_city_of_gold }
 
 		provinces_to_highlight = {
-			region = caribbean_sea_region
+			colonial_region = colonial_the_carribean
+			has_discovered = ROOT
 		}
 
 		trigger = {
-			colony = 2
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 12
+				colonial_region = colonial_the_carribean
+				is_city = yes
+			}
 		}
 		effect = {
 			add_liberty_desire = -20
-			# todo
+			# TODO
 		}
 	}
+}
+
+ming_colonist_2 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+	}
+	has_country_shield = yes
+
+	south_china_sea = {
+		position = 9
+		icon = mission_iberian_conquistador
+		required_missions = {
+			ming_colonize_taiwan
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 658
+				province_id = 657
+				province_id = 4348
+			}
+		}
+
+		trigger = {
+			AND = {
+				658 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				657 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				4348 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+
+		effect = {
+			# TODO
+		}
+	}
+
+	trade_in_golden_state = {
+		icon = mission_rb_import_potatoes
+		required_missions = {
+			kamchatka_naval_port
+		}
+
+		provinces_to_highlight = {
+			colonial_region = colonial_california
+			has_discovered = ROOT
+		}
+
+		trigger = {
+			4637 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				colonial_region = colonial_california
+				is_city = yes
+			}
+		}
+
+		effect = {
+			# TOFO
+		}
+	}
+
+	explore_rio_bay = {
+		icon = mission_bedouins
+		required_missions = {
+			trade_in_golden_state
+		}
+
+		provinces_to_highlight = {
+			colonial_region = colonial_louisiana
+			has_discovered = ROOT
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				colonial_region = colonial_louisiana
+				is_city = yes
+			}
+		}
+
+		effect = {
+			# TODO
+		}
+	}
+
+	sieze_east_coast = {
+		icon = mission_rb_the_thirteen_colonies
+		required_missions = {
+			explore_rio_bay
+		}
+
+		provinces_to_highlight = {
+			colonial_region = colonial_eastern_america
+			has_discovered = ROOT
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 13
+				colonial_region = colonial_eastern_america
+				is_city = yes
+			}
+		}
+
+		effect = {
+			# TODO
+		}
+	}
+}
+
+ming_colonist_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+	}
+
+	dominate_japan_trade = {
+		position = 10
+		icon = mission_japanese_fort
+		required_missions = {
+			kamchatka_naval_port
+		}
+
+		provinces_to_highlight = {
+			province_id = 1376
+		}
+
+		trigger = {
+			1376 = {
+				is_strongest_trade_power = ROOT
+				has_most_province_trade_power = ROOT
+			}
+		}
+
+		effect = {
+			# TODO
+		}
+	}
+}
+
+ming_colonist_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+	}
+
+	zhenghe_voyage = {
+		position = 9
+		icon = mission_rb_a_mighty_fleet
+		required_missions = {
+			ming_colonize_taiwan
+		}
+
+		provinces_to_highlight = {
+			province_id = 1177
+			has_discovered = ROOT
+		}
+
+		trigger = {
+			1177 = {
+				has_discovered = ROOT
+			}
+		}
+
+		effect = {
+			# TODO
+		}
+	}
+
+	ivory_coast = {
+		icon = mission_rb_increase_our_reach
+		required_missions = {
+			zhenghe_voyage
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1139
+				province_id = 2258
+			}
+			has_discovered = ROOT
+		}
+
+		trigger = {
+			1139 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2258 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			# TODO
+		}
+	}
+}
+
+# 明西部战事系列
+ming_westside_story_1 = {
+
+}
+
+# 明建立联邦系列
+ming_common_wealth_1 = {
+
 }

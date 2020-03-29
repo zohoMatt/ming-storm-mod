@@ -77,7 +77,7 @@ chinese_peasants_rebels = {
 	}
 
 	demands_description = "chinese_peasants_rebels_demand"
-	# todo Establish a new country
+	# TODO Establish a new country
 	demands_enforced_effect = {
 		add_prestige = -30
 
