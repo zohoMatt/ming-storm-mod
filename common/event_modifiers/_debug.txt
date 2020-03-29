@@ -1,3 +1,11 @@
 _debug_add_monthly_income = {
-	global_tax_modifier = 100
+	global_tax_modifier = 10
+}
+
+_debug_add_colonists = {
+	colonists = 20
+}
+
+_debug_add_merchants = {
+	merchants = 20
 }

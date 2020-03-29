@@ -11,14 +11,27 @@ country_event = {
 		is_year = 1999
 	}
 
-	immediate = {
+	option = {
+		name = _debug_add_monthly_income
 		add_country_modifier = {
-			name = _debug_add_monthly_income
+			name = _debug_add_10x_monthly_income
 			duration = -1
 		}
 	}
 
 	option = {
-		name = _debug.01.a
+		name = _debug_add_20_colonists
+		add_country_modifier = {
+			name = _debug_add_colonists
+			duration = -1
+		}
+	}
+
+	option = {
+		name = _debug_add_20_merchants
+		add_country_modifier = {
+			name = _debug_add_merchants
+			duration = -1
+		}
 	}
 }
