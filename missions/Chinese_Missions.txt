@@ -100,8 +100,8 @@ indochina_heritage_1 = {
 		position = 5
 		icon = mission_sea_battles
 		required_missions = {
-			control_siam,
-			annex_da_viet,
+			control_siam
+			annex_da_viet
 			unify_laotian_culture
 		}
 
