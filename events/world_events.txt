@@ -1,0 +1,29 @@
+name = world_events
+
+country_event = {
+	id = world_events.01
+	title = world_events.01.title
+	desc = world_events.01.desc
+	picture = MERCHANTS_TALKING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		num_of_merchants = 15
+	}
+
+	option = {
+		name = world_events.01.a
+		add_liberty_desire = 30
+		add_country_modifier = {
+			name = dominate_global_trade
+			duration = -1
+		}
+	}
+
+	option = {
+		name = world_events.01.b
+		add_mercantilism = -5
+		add_liberty_desire = -10
+	}
+}
