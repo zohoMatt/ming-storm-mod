@@ -1,0 +1,6 @@
+l_english:
+ _debug.01.t:0 "Debug menu"
+ _debug.01.desc:0 "NOTE Event modifiers cannot be overlapped."
+ _debug_add_monthly_income:0 "(EM) 10x tax income"
+ _debug_add_20_colonists:0 "(EM) Add 20 colonists"
+ _debug_add_20_merchants:0 "(EM) Add 20 merchants"
