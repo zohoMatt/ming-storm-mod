@@ -40,4 +40,64 @@ spriteTypes = {
 		texturefile = "gfx\event_pictures\MING_MINISTERS_event_pictures.dds"
 		allwaystransparent = yes
 	}
+
+	spriteType = {
+		name = "MING_ARROWS_event_pictures"
+		texturefile = "gfx\event_pictures\MING_ARROWS_event_pictures.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "MING_CALLIGRAPHY_event_pictures"
+		texturefile = "gfx\event_pictures\MING_CALLIGRAPHY_event_pictures.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "MING_CHILDREN_PLAY_event_pictures"
+		texturefile = "gfx\event_pictures\MING_CHILDREN_PLAY_event_pictures.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "MING_EMPEROR_SHIP_CRUISE_event_pictures"
+		texturefile = "gfx\event_pictures\MING_EMPEROR_SHIP_CRUISE_event_pictures.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "MING_GARDEN_event_pictures"
+		texturefile = "gfx\event_pictures\MING_GARDEN_event_pictures.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "MING_LATERN_FESTIVAL_event_pictures"
+		texturefile = "gfx\event_pictures\MING_LATERN_FESTIVAL_event_pictures.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "MING_MAGIC_SHOW_event_pictures"
+		texturefile = "gfx\event_pictures\MING_MAGIC_SHOW_event_pictures.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "MING_PALACE_event_pictures"
+		texturefile = "gfx\event_pictures\MING_PALACE_event_pictures.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "MING_PALACE_PORCH_event_pictures"
+		texturefile = "gfx\event_pictures\MING_PALACE_PORCH_event_pictures.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "MING_TRIBUTARY_STATE_event_pictures"
+		texturefile = "gfx\event_pictures\MING_TRIBUTARY_STATE_event_pictures.dds"
+		allwaystransparent = yes
+	}
 }
