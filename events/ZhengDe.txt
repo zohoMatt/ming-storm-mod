@@ -9,7 +9,7 @@ country_event = {
 
 	trigger = {
 		is_year = 1510
-		has_country_modifier = western_depot_established
+		has_country_modifier = efct_western_depot_established
 		adm = 3
 		dip = 3
 		mil = 3
@@ -19,7 +19,7 @@ country_event = {
 		name = ZhengDe.01.a
 		add_treasury = -1000
 		add_country_modifier = {
-			name = leopards_chamber_setup
+			name = efct_leopards_chamber_setup
 			duration = -1
 		}
 	}

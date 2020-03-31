@@ -399,7 +399,7 @@ ming_colonist_1 = {
 
 		effect = {
 			add_country_modifier = {
-				name = discover_mexico
+				name = efct_discover_mexico
 				duration = 9125
 			}
 		}
@@ -424,7 +424,7 @@ ming_colonist_1 = {
 		effect = {
 			add_liberty_desire = -20
 			add_country_modifier = {
-				name = conquer_caribbean
+				name = efct_conquer_caribbean
 				duration = -1
 			}
 		}
@@ -499,7 +499,7 @@ ming_colonist_2 = {
 
 		effect = {
 			add_country_modifier = {
-				name = colonize_west_us
+				name = efct_colonize_west_us
 				duration = -1
 			}
 		}
@@ -526,7 +526,7 @@ ming_colonist_2 = {
 
 		effect = {
 			add_country_modifier = {
-				name = colonize_mid_us
+				name = efct_colonize_mid_us
 				duration = -1
 			}
 		}
@@ -588,7 +588,7 @@ ming_colonist_3 = {
 
 		effect = {
 			add_country_modifier = {
-				name = dominate_japan_trade
+				name = efct_dominate_japan_trade
 				duration = -1
 			}
 		}
@@ -611,19 +611,19 @@ ming_colonist_4 = {
 		}
 
 		provinces_to_highlight = {
-			province_id = 1177
+			province_id = 2324
 			has_discovered = ROOT
 		}
 
 		trigger = {
-			1177 = {
+			2324 = {
 				has_discovered = ROOT
 			}
 		}
 
 		effect = {
 			add_country_modifier = {
-				name = zhenghe_voyage_fufilled
+				name = efct_zhenghe_voyage_fufilled
 				duration = 7300 # 20 years
 			}
 		}
@@ -654,7 +654,7 @@ ming_colonist_4 = {
 
 		effect = {
 			add_country_modifier = {
-				name = colonize_ivory_coast
+				name = efct_colonize_ivory_coast
 				duration = 7300 # 20 years
 			}
 		}

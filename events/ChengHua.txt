@@ -20,7 +20,7 @@ country_event = {
 		change_adm = 1
 		add_years_of_income = -3
 		add_ruler_modifier = {
-			name = western_depot_established
+			name = efct_western_depot_established
 			duration = -1
 		}
 	}
@@ -28,7 +28,7 @@ country_event = {
 	option = {
 		name = ChengHua.01.b
 		add_ruler_modifier = {
-			name = eunuchs_unhappy_about_wp
+			name = efct_eunuchs_unhappy_about_wp
 			duration = -1
 		}
 	}

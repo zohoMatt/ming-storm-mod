@@ -1,25 +1,25 @@
 # 御驾亲征
-emperor_as_leader = {
+efct_emperor_as_leader = {
 	land_morale = 0.1
 	garrison_growth = 0.1
 	recover_army_morale_speed = 0.2
 }
 
 # 西厂设立
-western_depot_established = {
+efct_western_depot_established = {
 	discipline = 0.05
 	global_unrest = 1
 }
 
 # 拒绝西厂
-eunuchs_unhappy_about_wp = {
+efct_eunuchs_unhappy_about_wp = {
 	yearly_harmony = 3
 	yearly_corruption = 0.5
 	tolerance_own = 0.5
 }
 
 # 豹房设立
-leopards_chamber_setup = {
+efct_leopards_chamber_setup = {
 	meritocracy = 18
 	diplomatic_reputation = 1
 	yearly_corruption = 0.2
@@ -39,14 +39,14 @@ effect_dominate_malacca_trade = {
 }
 
 # 郑和下西洋
-zhenghe_voyage_fufilled = {
+efct_zhenghe_voyage_fufilled = {
 	ship_durability = 0.1
 	navy_tradition_decay = -0.5
 	admiral_cost = -0.2
 }
 
 # 殖民象牙海岸
-colonize_ivory_coast = {
+efct_colonize_ivory_coast = {
 	trade_steering = 0.05
 }
 
@@ -58,20 +58,20 @@ effect_kamct_naval_port = {
 }
 
 # 垄断日本贸易
-dominate_japan_trade = {
+efct_dominate_japan_trade = {
 	light_ship_cost = -0.1
 	light_ship_power = 0.15
 }
 
 # 发现墨西哥
-discover_mexico = {
+efct_discover_mexico = {
 	global_colonial_growth = 20
 	native_uprising_chance = -0.5
 	range = 0.25
 }
 
 # 夺取加勒比海
-conquer_caribbean = {
+efct_conquer_caribbean = {
 	merchants = 1
 	trade_efficiency = 0.1
 	global_colonial_growth = 30
@@ -83,28 +83,27 @@ conquer_caribbean = {
 }
 
 # 殖民美西
-colonize_west_us = {
-	colonists = 1
-	production_efficiency = 0.1
-	auto_explore_adjacent_to_colony = yes
-}
-
-# 殖民美中
-colonize_mid_us = {
+efct_colonize_west_us = {
 	colonists = 1
 	merchants = 1
 	global_colonial_growth = 50
-	expel_minorities_cost = -0.5
 	trade_steering = 0.1
 	trade_efficiency = 0.1
 	global_trade_power = 0.1
 	global_trade_goods_size_modifier = 0.1
-	max_absolutism = 15
 	yearly_absolutism = 2
 	meritocracy = 2
 	
+	max_absolutism = -10
 	yearly_corruption = 0.2
 	inflation_reduction = -0.1
+}
+
+# 殖民美中
+efct_colonize_mid_us = {
+	colonists = 1
+	production_efficiency = 0.1
+	expel_minorities_cost = -0.5
 }
 
 # 殖民美东（对明战略意义差，且进度慢）
