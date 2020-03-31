@@ -38,11 +38,29 @@ effect_dominate_malacca_trade = {
 	inflation_action_cost = 0.2
 }
 
+# 郑和下西洋
+zhenghe_voyage_fufilled = {
+	ship_durability = 0.1
+	navy_tradition_decay = -0.5
+	admiral_cost = -0.2
+}
+
+# 殖民象牙海岸
+colonize_ivory_coast = {
+	trade_steering = 0.05
+}
+
 # 勘察加海军基地
 effect_kamct_naval_port = {
 	naval_maintenance_modifier = -0.05
 	navy_tradition_decay = -0.2
 	own_coast_naval_combat_bonus = 1.0
+}
+
+# 垄断日本贸易
+dominate_japan_trade = {
+	light_ship_cost = -0.1
+	light_ship_power = 0.15
 }
 
 # 发现墨西哥
@@ -55,7 +73,8 @@ discover_mexico = {
 # 夺取加勒比海
 conquer_caribbean = {
 	merchants = 1
-	global_colonial_growth = 10
+	trade_efficiency = 0.1
+	global_colonial_growth = 30
 	global_tariffs = 0.2
 	embargo_efficiency = 0.3
 	naval_forcelimit_modifier = 0.2
@@ -63,8 +82,15 @@ conquer_caribbean = {
 	naval_maintenance_modifier = 0.1
 }
 
-# 殖民美中沙漠（对明的战略意义差，因此奖励需要加强）
-colony_mid_us = {
+# 殖民美西
+colonize_west_us = {
+	colonists = 1
+	production_efficiency = 0.1
+	auto_explore_adjacent_to_colony = yes
+}
+
+# 殖民美中
+colonize_mid_us = {
 	colonists = 1
 	merchants = 1
 	global_colonial_growth = 50
@@ -82,7 +108,7 @@ colony_mid_us = {
 }
 
 # 殖民美东（对明战略意义差，且进度慢）
-colony_east_us = {
+colonize_east_us = {
 	colonists = 1
 	merchants = 1
 	global_colonial_growth = 80

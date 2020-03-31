@@ -372,6 +372,9 @@ ming_colonist_1 = {
 				name = effect_kamct_naval_port
 				duration = -1
 			}
+			korea_region = {
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -420,7 +423,10 @@ ming_colonist_1 = {
 		}
 		effect = {
 			add_liberty_desire = -20
-			# TODO
+			add_country_modifier = {
+				name = conquer_caribbean
+				duration = -1
+			}
 		}
 	}
 }
@@ -464,7 +470,8 @@ ming_colonist_2 = {
 		}
 
 		effect = {
-			# TODO
+			add_dip_power = 100
+			add_mandate = 10
 		}
 	}
 
@@ -491,7 +498,10 @@ ming_colonist_2 = {
 		}
 
 		effect = {
-			# TOFO
+			add_country_modifier = {
+				name = colonize_west_us
+				duration = -1
+			}
 		}
 	}
 
@@ -515,7 +525,10 @@ ming_colonist_2 = {
 		}
 
 		effect = {
-			# TODO
+			add_country_modifier = {
+				name = colonize_mid_us
+				duration = -1
+			}
 		}
 	}
 
@@ -539,7 +552,10 @@ ming_colonist_2 = {
 		}
 
 		effect = {
-			# TODO
+			add_country_modifier = {
+				name = colonize_east_us
+				duration = -1
+			}
 		}
 	}
 }
@@ -571,7 +587,10 @@ ming_colonist_3 = {
 		}
 
 		effect = {
-			# TODO
+			add_country_modifier = {
+				name = dominate_japan_trade
+				duration = -1
+			}
 		}
 	}
 }
@@ -603,7 +622,10 @@ ming_colonist_4 = {
 		}
 
 		effect = {
-			# TODO
+			add_country_modifier = {
+				name = zhenghe_voyage_fufilled
+				duration = 7300 # 20 years
+			}
 		}
 	}
 
@@ -631,7 +653,10 @@ ming_colonist_4 = {
 		}
 
 		effect = {
-			# TODO
+			add_country_modifier = {
+				name = colonize_ivory_coast
+				duration = 7300 # 20 years
+			}
 		}
 	}
 }
