@@ -570,6 +570,7 @@ ming_colonist_3 = {
 	potential = {
 		tag = MNG
 	}
+	has_country_shield = yes
 
 	dominate_japan_trade = {
 		position = 10
@@ -605,8 +606,9 @@ ming_colonist_4 = {
 	potential = {
 		tag = MNG
 	}
+	has_country_shield = yes
 
-	zhenghe_voyage = {
+	regain_zhenghe_spirit = {
 		position = 9
 		icon = mission_rb_a_mighty_fleet
 		required_missions = {
@@ -619,14 +621,14 @@ ming_colonist_4 = {
 		}
 
 		trigger = {
-			2324 = {
+			1177 = {
 				has_discovered = ROOT
 			}
 		}
 
 		effect = {
 			add_country_modifier = {
-				name = efct_zhenghe_voyage_fufilled
+				name = efct_regain_zhenghe_spirit_fufilled
 				duration = 7300 # 20 years
 			}
 		}
@@ -635,7 +637,7 @@ ming_colonist_4 = {
 	ivory_coast = {
 		icon = mission_rb_increase_our_reach
 		required_missions = {
-			zhenghe_voyage
+			regain_zhenghe_spirit
 		}
 
 		provinces_to_highlight = {
@@ -672,6 +674,7 @@ ming_westside_story_1 = {
 	potential = {
 		tag = MNG
 	}
+	has_country_shield = yes
 	
 	secure_silk_road = {
 		position = 13
@@ -752,6 +755,7 @@ ming_westside_story_2 = {
 	potential = {
 		tag = MNG
 	}
+	has_country_shield = yes
 	
 	sieze_xinjiang_area = {
 		position = 14
@@ -876,6 +880,7 @@ ming_westside_story_3 = {
 	potential = {
 		tag = MNG
 	}
+	has_country_shield = yes
 	
 	clear_jurchen = {
 		position = 14
@@ -912,10 +917,13 @@ ming_common_wealth_1 = {
 	potential = {
 		tag = MNG
 	}
+	has_country_shield = yes
 
 	indian_market = {
 		position = 17
 		icon = mission_dominate_home_trade_node
+		required_missions = {
+		}
 	}
 
 	control_gulf_aden = {
@@ -961,6 +969,7 @@ ming_common_wealth_2 = {
 	potential = {
 		tag = MNG
 	}
+	has_country_shield = yes
 
 	defeat_anglo = {
 		position = 21
@@ -978,6 +987,7 @@ ming_common_wealth_3 = {
 	potential = {
 		tag = MNG
 	}
+	has_country_shield = yes
 
 	defeat_spain = {
 		position = 21
@@ -995,6 +1005,7 @@ ming_common_wealth_4 = {
 	potential = {
 		tag = MNG
 	}
+	has_country_shield = yes
 
 	defeat_slave = {
 		position = 20

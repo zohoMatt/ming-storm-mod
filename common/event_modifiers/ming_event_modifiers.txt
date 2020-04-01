@@ -38,8 +38,8 @@ effect_dominate_malacca_trade = {
 	inflation_action_cost = 0.2
 }
 
-# 郑和下西洋
-efct_zhenghe_voyage_fufilled = {
+# 重走郑和路
+efct_regain_zhenghe_spirit_fufilled = {
 	ship_durability = 0.1
 	navy_tradition_decay = -0.5
 	admiral_cost = -0.2
