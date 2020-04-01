@@ -149,6 +149,12 @@ indochina_heritage_1 = {
 
 		effect = {
 			add_adm_power = 100
+			burma_region = {
+				add_claim = ROOT
+			}
+			bengal_region = {
+				add_claim = ROOT
+			}
 		}
 	}
 
@@ -371,9 +377,6 @@ ming_colonist_1 = {
 			add_country_modifier = {
 				name = effect_kamct_naval_port
 				duration = -1
-			}
-			korea_region = {
-				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -663,10 +666,361 @@ ming_colonist_4 = {
 
 # 明西部战事系列
 ming_westside_story_1 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+	}
+	
+	secure_silk_road = {
+		position = 13
+		icon = mission_arabian_fort
+		required_missions = {
+		}
 
+		provinces_to_highlight = {
+			area = west_gansu_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			west_gansu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			turpan_kumul_area = {
+				add_permanent_claim = ROOT
+			}
+			north_zungaria = {
+				add_permanent_claim = ROOT
+			}
+			zungaria_area = {
+				add_permanent_claim = ROOT
+			}
+			tarim_basin_area = {
+				add_permanent_claim = ROOT
+			}
+			shanshan_area = {
+				add_permanent_claim = ROOT
+			}
+			kashgaria_area = {
+				add_permanent_claim = ROOT
+			}
+			manchuria_region = {
+				add_permanent_claim = ROOT
+			}
+			mongolia_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	finish_nomad = {
+		icon = mission_crusade_for_varna
+		required_missions = {
+			secure_silk_road
+		}
+
+		provinces_to_highlight = {
+			region = mongolia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			mongolia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			central_asia_region = {
+				add_claim = ROOT
+			}
+		}
+	}
+}
+
+ming_westside_story_2 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+	}
+	
+	sieze_xinjiang_area = {
+		position = 14
+		icon = mission_great_wall
+		required_missions = {
+			secure_silk_road
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				area = turpan_kumul_area
+				area = north_zungaria
+				area = zungaria_area
+				area = tarim_basin_area		# 中央回部
+				area = shanshan_area
+				area = kashgaria_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			turpan_kumul_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_zungaria = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			zungaria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tarim_basin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shanshan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kashgaria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			tibet_region = {
+				add_permanent_claim = ROOT
+			}
+			reverse_add_opinion = {
+				who = UTS
+				modifier = ming_empire_of_heaven
+			}
+			reverse_add_opinion = {
+				who = KAM
+				modifier = ming_empire_of_heaven
+			}
+			reverse_add_opinion = {
+				who = KOR
+				modifier = ming_empire_of_heaven
+			}
+		}
+	}
+	
+	unify_tsang = {
+		icon = mission_non-western_soldiers
+		required_missions = {
+			sieze_xinjiang_area
+		}
+		
+		provinces_to_highlight = {
+			region = tibet_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			tibet_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			kashmir_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	take_kashmir = {
+		icon = mission_indian_soldier_elephant
+		required_missions = {
+			unify_tsang
+		}
+
+		provinces_to_highlight = {
+			area = kashmir_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			kashmir_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			hindusthan_region = {
+				add_claim = ROOT
+			}
+		}
+	}
+}
+
+ming_westside_story_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+	}
+	
+	clear_jurchen = {
+		position = 14
+		icon = mission_manchu_warrior
+		required_missions = {
+			secure_silk_road
+		}
+
+		provinces_to_highlight = {
+			region = manchuria_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			manchuria_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			korea_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
 }
 
 # 明建立联邦系列
 ming_common_wealth_1 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+	}
 
+	indian_market = {
+		position = 17
+		icon = mission_dominate_home_trade_node
+	}
+
+	control_gulf_aden = {
+		icon = mission_galleys_in_port
+		required_missions = {
+			indian_market
+		}
+	}
+
+	take_egypt = {
+		icon = mission_rb_seize_alexandria
+		required_missions = {
+			control_gulf_aden
+		}
+	}
+
+	defeat_ottoman = {
+		icon = mission_mosque
+		required_missions = {
+			take_egypt
+		}
+	}
+
+	march_in_roma = {
+		icon = mission_monarch_in_throne_room
+		required_missions = {
+			defeat_ottoman
+		}
+	}
+
+	empire_of_europe = {
+		icon = mission_assemble_an_army
+		required_missions = {
+			march_in_roma
+		}
+	}
+}
+
+ming_common_wealth_2 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+	}
+
+	defeat_anglo = {
+		position = 21
+		icon = mission_rb_rule_britannia_scottish_version
+		required_missions = {
+			defeat_ottoman
+		}
+	}
+}
+
+ming_common_wealth_3 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+	}
+
+	defeat_spain = {
+		position = 21
+		icon = mission_rb_grow_the_channel
+		required_missions = {
+			defeat_ottoman
+		}
+	}
+}
+
+ming_common_wealth_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNG
+	}
+
+	defeat_slave = {
+		position = 20
+		icon = mission_cossack_cavalry
+		required_missions = {
+			take_egypt
+		}
+
+		provinces_to_highlight = {
+		}
+
+		trigger = {
+			# Complete it if no Russia exists
+			RUS = {
+				NOT = {
+					total_development = 500
+				}
+			}
+		}
+	}
+
+	ming_dismantles_hre = {
+		icon = mission_rb_ascendant
+		required_missions = {
+			defeat_slave
+			defeat_ottoman
+		}
+	}
 }

@@ -1,0 +1,4 @@
+ming_empire_of_heaven = {
+	opinion = 120
+	yearly_decay = -8
+}
