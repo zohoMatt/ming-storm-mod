@@ -1,0 +1,22 @@
+{
+  "name": "the-ming-storm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zohoMatt/ming-storm-mod.git"
+  },
+  "author": "MattZo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zohoMatt/ming-storm-mod/issues"
+  },
+  "homepage": "https://github.com/zohoMatt/ming-storm-mod#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
