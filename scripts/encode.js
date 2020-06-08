@@ -1,5 +1,4 @@
-const fs = require('fs')
-const path = require('path')
+// Reference: https://gist.github.com/bruceCzK/96ad6e054111f929ed67291552d36334
 
 const cp1252ToUtf8 = char => {
     const escapeList = {
